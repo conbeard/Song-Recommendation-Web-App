@@ -25,7 +25,7 @@ jobs:
       - name: Build Web App
         run: npm build
       - name: Deploy Web App
-        run: gcloud app deploy
+        run: gcloud app deploy --project=${{ secrets.GCP_PROJECT_ID }}
       
 #       - name: Deploy to App Engine
 #         id: deploy
