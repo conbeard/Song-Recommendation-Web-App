@@ -5,8 +5,9 @@ import './App.css';
 export default function App() {
 
   const wave = () => {
-
-  }
+    // let e = ethers();
+    // e.toString();
+  };
 
   return (
     <div className="mainContainer">
