@@ -20,8 +20,8 @@ jobs:
         run: npm build
         
       - name: Deploy an App Engine app
-        id: deploy-app
-        uses: google-github-actions/deploy-appengine@v0.2.0
+        id: deploy
+        uses: google-github-actions/deploy-appengine@main
         with:
           project: ${{ secrets.GCP_PROJECT }}
           deliverables: app.yaml
