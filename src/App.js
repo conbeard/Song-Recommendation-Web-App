@@ -124,6 +124,8 @@ const App = () => {
   useEffect(() => {
     let wavePortalContract;
 
+    checkIfWalletIsConnected();
+
     const onNewWave = (from, timestamp, message) => {
       console.log('NewWave', from, timestamp, message);
       setAllWaves(prevState => [
@@ -149,6 +151,7 @@ const App = () => {
         wavePortalContract.off('NewWave', onNewWave);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
